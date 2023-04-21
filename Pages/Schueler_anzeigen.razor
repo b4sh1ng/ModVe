@@ -1,0 +1,18 @@
+﻿@page "/schuAnz"
+
+<PageTitle>Schüler anzeigen</PageTitle>
+
+<h1>Schüler anzeigen</h1>
+
+<p role="status">Current count: @currentCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+}

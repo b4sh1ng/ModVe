@@ -50,43 +50,6 @@
         }
       },
       {
-        "HashCode": -188948130,
-        "Kind": "Components.Component",
-        "Name": "ModVe.Pages.Counter",
-        "AssemblyName": "ModVe",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Counter"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ModVe.Pages.Counter",
-          "Common.TypeNamespace": "ModVe.Pages",
-          "Common.TypeNameIdentifier": "Counter"
-        }
-      },
-      {
-        "HashCode": 1577875972,
-        "Kind": "Components.Component",
-        "Name": "ModVe.Pages.Counter",
-        "AssemblyName": "ModVe",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ModVe.Pages.Counter"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ModVe.Pages.Counter",
-          "Common.TypeNamespace": "ModVe.Pages",
-          "Common.TypeNameIdentifier": "Counter",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": -992055934,
         "Kind": "Components.Component",
         "Name": "ModVe.Pages.FetchData",
@@ -124,39 +87,298 @@
         }
       },
       {
-        "HashCode": 1202211099,
+        "HashCode": -1474393877,
         "Kind": "Components.Component",
-        "Name": "ModVe.Shared.NavMenu",
+        "Name": "ModVe.Pages.Schueler_edit",
         "AssemblyName": "ModVe",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "NavMenu"
+            "TagName": "Schueler_edit"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ModVe.Shared.NavMenu",
-          "Common.TypeNamespace": "ModVe.Shared",
-          "Common.TypeNameIdentifier": "NavMenu"
+          "Common.TypeName": "ModVe.Pages.Schueler_edit",
+          "Common.TypeNamespace": "ModVe.Pages",
+          "Common.TypeNameIdentifier": "Schueler_edit"
         }
       },
       {
-        "HashCode": -449014865,
+        "HashCode": 415704493,
         "Kind": "Components.Component",
-        "Name": "ModVe.Shared.NavMenu",
+        "Name": "ModVe.Pages.Schueler_edit",
         "AssemblyName": "ModVe",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "ModVe.Shared.NavMenu"
+            "TagName": "ModVe.Pages.Schueler_edit"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ModVe.Shared.NavMenu",
-          "Common.TypeNamespace": "ModVe.Shared",
-          "Common.TypeNameIdentifier": "NavMenu",
+          "Common.TypeName": "ModVe.Pages.Schueler_edit",
+          "Common.TypeNamespace": "ModVe.Pages",
+          "Common.TypeNameIdentifier": "Schueler_edit",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 928037788,
+        "Kind": "Components.Component",
+        "Name": "ModVe.Pages.schueler_anzeigen",
+        "AssemblyName": "ModVe",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "schueler_anzeigen"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ModVe.Pages.schueler_anzeigen",
+          "Common.TypeNamespace": "ModVe.Pages",
+          "Common.TypeNameIdentifier": "schueler_anzeigen"
+        }
+      },
+      {
+        "HashCode": -2067326354,
+        "Kind": "Components.Component",
+        "Name": "ModVe.Pages.schueler_anzeigen",
+        "AssemblyName": "ModVe",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ModVe.Pages.schueler_anzeigen"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ModVe.Pages.schueler_anzeigen",
+          "Common.TypeNamespace": "ModVe.Pages",
+          "Common.TypeNameIdentifier": "schueler_anzeigen",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -1435671205,
+        "Kind": "Components.Component",
+        "Name": "ModVe.Pages.Lehrer_anzeigen",
+        "AssemblyName": "ModVe",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Lehrer_anzeigen"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ModVe.Pages.Lehrer_anzeigen",
+          "Common.TypeNamespace": "ModVe.Pages",
+          "Common.TypeNameIdentifier": "Lehrer_anzeigen"
+        }
+      },
+      {
+        "HashCode": 482145987,
+        "Kind": "Components.Component",
+        "Name": "ModVe.Pages.Lehrer_anzeigen",
+        "AssemblyName": "ModVe",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ModVe.Pages.Lehrer_anzeigen"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ModVe.Pages.Lehrer_anzeigen",
+          "Common.TypeNamespace": "ModVe.Pages",
+          "Common.TypeNameIdentifier": "Lehrer_anzeigen",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -101685317,
+        "Kind": "Components.Component",
+        "Name": "ModVe.Pages.Lehrer_edit",
+        "AssemblyName": "ModVe",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Lehrer_edit"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ModVe.Pages.Lehrer_edit",
+          "Common.TypeNamespace": "ModVe.Pages",
+          "Common.TypeNameIdentifier": "Lehrer_edit"
+        }
+      },
+      {
+        "HashCode": 765574756,
+        "Kind": "Components.Component",
+        "Name": "ModVe.Pages.Lehrer_edit",
+        "AssemblyName": "ModVe",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ModVe.Pages.Lehrer_edit"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ModVe.Pages.Lehrer_edit",
+          "Common.TypeNamespace": "ModVe.Pages",
+          "Common.TypeNameIdentifier": "Lehrer_edit",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1517595631,
+        "Kind": "Components.Component",
+        "Name": "ModVe.Pages.Modulzuordnung_anzeigen",
+        "AssemblyName": "ModVe",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Modulzuordnung_anzeigen"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ModVe.Pages.Modulzuordnung_anzeigen",
+          "Common.TypeNamespace": "ModVe.Pages",
+          "Common.TypeNameIdentifier": "Modulzuordnung_anzeigen"
+        }
+      },
+      {
+        "HashCode": -1537125600,
+        "Kind": "Components.Component",
+        "Name": "ModVe.Pages.Modulzuordnung_anzeigen",
+        "AssemblyName": "ModVe",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ModVe.Pages.Modulzuordnung_anzeigen"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ModVe.Pages.Modulzuordnung_anzeigen",
+          "Common.TypeNamespace": "ModVe.Pages",
+          "Common.TypeNameIdentifier": "Modulzuordnung_anzeigen",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -1869943741,
+        "Kind": "Components.Component",
+        "Name": "ModVe.Pages.Module_edit",
+        "AssemblyName": "ModVe",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Module_edit"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ModVe.Pages.Module_edit",
+          "Common.TypeNamespace": "ModVe.Pages",
+          "Common.TypeNameIdentifier": "Module_edit"
+        }
+      },
+      {
+        "HashCode": 1884650626,
+        "Kind": "Components.Component",
+        "Name": "ModVe.Pages.Module_edit",
+        "AssemblyName": "ModVe",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ModVe.Pages.Module_edit"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ModVe.Pages.Module_edit",
+          "Common.TypeNamespace": "ModVe.Pages",
+          "Common.TypeNameIdentifier": "Module_edit",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1117989408,
+        "Kind": "Components.Component",
+        "Name": "ModVe.Pages.Module_anzeigen",
+        "AssemblyName": "ModVe",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Module_anzeigen"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ModVe.Pages.Module_anzeigen",
+          "Common.TypeNamespace": "ModVe.Pages",
+          "Common.TypeNameIdentifier": "Module_anzeigen"
+        }
+      },
+      {
+        "HashCode": -1653086261,
+        "Kind": "Components.Component",
+        "Name": "ModVe.Pages.Module_anzeigen",
+        "AssemblyName": "ModVe",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ModVe.Pages.Module_anzeigen"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ModVe.Pages.Module_anzeigen",
+          "Common.TypeNamespace": "ModVe.Pages",
+          "Common.TypeNameIdentifier": "Module_anzeigen",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -890026130,
+        "Kind": "Components.Component",
+        "Name": "ModVe.Pages.Modulzuordnung_edit",
+        "AssemblyName": "ModVe",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Modulzuordnung_edit"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ModVe.Pages.Modulzuordnung_edit",
+          "Common.TypeNamespace": "ModVe.Pages",
+          "Common.TypeNameIdentifier": "Modulzuordnung_edit"
+        }
+      },
+      {
+        "HashCode": 1664312529,
+        "Kind": "Components.Component",
+        "Name": "ModVe.Pages.Modulzuordnung_edit",
+        "AssemblyName": "ModVe",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ModVe.Pages.Modulzuordnung_edit"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ModVe.Pages.Modulzuordnung_edit",
+          "Common.TypeNamespace": "ModVe.Pages",
+          "Common.TypeNameIdentifier": "Modulzuordnung_edit",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -322,6 +544,43 @@
           "Common.TypeNamespace": "ModVe.Shared",
           "Common.TypeNameIdentifier": "MainLayout",
           "Components.IsSpecialKind": "Components.ChildContent",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1202211099,
+        "Kind": "Components.Component",
+        "Name": "ModVe.Shared.NavMenu",
+        "AssemblyName": "ModVe",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ModVe.Shared.NavMenu",
+          "Common.TypeNamespace": "ModVe.Shared",
+          "Common.TypeNameIdentifier": "NavMenu"
+        }
+      },
+      {
+        "HashCode": -449014865,
+        "Kind": "Components.Component",
+        "Name": "ModVe.Shared.NavMenu",
+        "AssemblyName": "ModVe",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ModVe.Shared.NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ModVe.Shared.NavMenu",
+          "Common.TypeNamespace": "ModVe.Shared",
+          "Common.TypeNameIdentifier": "NavMenu",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -18995,6 +19254,16 @@
   "RootNamespace": "ModVe",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\Info21\\source\\repos\\ModVe\\ModVe\\Pages\\Module_edit.razor",
+      "TargetPath": "Pages\\Module_edit.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\Info21\\source\\repos\\ModVe\\ModVe\\Pages\\Module_anzeigen.razor",
+      "TargetPath": "Pages\\Module_anzeigen.razor",
+      "FileKind": "component"
+    },
+    {
       "FilePath": "c:\\Users\\Info21\\source\\repos\\ModVe\\ModVe\\Pages\\Error.cshtml",
       "TargetPath": "Pages\\Error.cshtml",
       "FileKind": "mvc"
@@ -19010,8 +19279,8 @@
       "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Users\\Info21\\source\\repos\\ModVe\\ModVe\\Pages\\Counter.razor",
-      "TargetPath": "Pages\\Counter.razor",
+      "FilePath": "c:\\Users\\Info21\\source\\repos\\ModVe\\ModVe\\Pages\\Modulzuordnung_anzeigen.razor",
+      "TargetPath": "Pages\\Modulzuordnung_anzeigen.razor",
       "FileKind": "component"
     },
     {
@@ -19030,8 +19299,33 @@
       "FileKind": "component"
     },
     {
+      "FilePath": "c:\\Users\\Info21\\source\\repos\\ModVe\\ModVe\\Pages\\Lehrer_anzeigen.razor",
+      "TargetPath": "Pages\\Lehrer_anzeigen.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\Info21\\source\\repos\\ModVe\\ModVe\\Pages\\schueler_anzeigen.razor",
+      "TargetPath": "Pages\\schueler_anzeigen.razor",
+      "FileKind": "component"
+    },
+    {
       "FilePath": "c:\\Users\\Info21\\source\\repos\\ModVe\\ModVe\\App.razor",
       "TargetPath": "App.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\Info21\\source\\repos\\ModVe\\ModVe\\Pages\\Schueler_edit.razor",
+      "TargetPath": "Pages\\Schueler_edit.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\Info21\\source\\repos\\ModVe\\ModVe\\Pages\\Lehrer_edit.razor",
+      "TargetPath": "Pages\\Lehrer_edit.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\Info21\\source\\repos\\ModVe\\ModVe\\Pages\\Modulzuordnung_edit.razor",
+      "TargetPath": "Pages\\Modulzuordnung_edit.razor",
       "FileKind": "component"
     },
     {
