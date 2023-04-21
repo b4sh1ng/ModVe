@@ -13,6 +13,43 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
+        "HashCode": -1737593889,
+        "Kind": "Components.Component",
+        "Name": "ModVe.Pages.Index",
+        "AssemblyName": "ModVe",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Index"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ModVe.Pages.Index",
+          "Common.TypeNamespace": "ModVe.Pages",
+          "Common.TypeNameIdentifier": "Index"
+        }
+      },
+      {
+        "HashCode": 1307239946,
+        "Kind": "Components.Component",
+        "Name": "ModVe.Pages.Index",
+        "AssemblyName": "ModVe",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ModVe.Pages.Index"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ModVe.Pages.Index",
+          "Common.TypeNamespace": "ModVe.Pages",
+          "Common.TypeNameIdentifier": "Index",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": -188948130,
         "Kind": "Components.Component",
         "Name": "ModVe.Pages.Counter",
@@ -87,76 +124,39 @@
         }
       },
       {
-        "HashCode": -1737593889,
+        "HashCode": 1202211099,
         "Kind": "Components.Component",
-        "Name": "ModVe.Pages.Index",
+        "Name": "ModVe.Shared.NavMenu",
         "AssemblyName": "ModVe",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Index"
+            "TagName": "NavMenu"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ModVe.Pages.Index",
-          "Common.TypeNamespace": "ModVe.Pages",
-          "Common.TypeNameIdentifier": "Index"
+          "Common.TypeName": "ModVe.Shared.NavMenu",
+          "Common.TypeNamespace": "ModVe.Shared",
+          "Common.TypeNameIdentifier": "NavMenu"
         }
       },
       {
-        "HashCode": 1307239946,
+        "HashCode": -449014865,
         "Kind": "Components.Component",
-        "Name": "ModVe.Pages.Index",
+        "Name": "ModVe.Shared.NavMenu",
         "AssemblyName": "ModVe",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "ModVe.Pages.Index"
+            "TagName": "ModVe.Shared.NavMenu"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ModVe.Pages.Index",
-          "Common.TypeNamespace": "ModVe.Pages",
-          "Common.TypeNameIdentifier": "Index",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 1202592001,
-        "Kind": "Components.Component",
-        "Name": "ModVe.App",
-        "AssemblyName": "ModVe",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "App"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ModVe.App",
-          "Common.TypeNamespace": "ModVe",
-          "Common.TypeNameIdentifier": "App"
-        }
-      },
-      {
-        "HashCode": 1087103191,
-        "Kind": "Components.Component",
-        "Name": "ModVe.App",
-        "AssemblyName": "ModVe",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ModVe.App"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ModVe.App",
-          "Common.TypeNamespace": "ModVe",
-          "Common.TypeNameIdentifier": "App",
+          "Common.TypeName": "ModVe.Shared.NavMenu",
+          "Common.TypeNamespace": "ModVe.Shared",
+          "Common.TypeNameIdentifier": "NavMenu",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -326,39 +326,39 @@
         }
       },
       {
-        "HashCode": 1202211099,
+        "HashCode": 1202592001,
         "Kind": "Components.Component",
-        "Name": "ModVe.Shared.NavMenu",
+        "Name": "ModVe.App",
         "AssemblyName": "ModVe",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "NavMenu"
+            "TagName": "App"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ModVe.Shared.NavMenu",
-          "Common.TypeNamespace": "ModVe.Shared",
-          "Common.TypeNameIdentifier": "NavMenu"
+          "Common.TypeName": "ModVe.App",
+          "Common.TypeNamespace": "ModVe",
+          "Common.TypeNameIdentifier": "App"
         }
       },
       {
-        "HashCode": -449014865,
+        "HashCode": 1087103191,
         "Kind": "Components.Component",
-        "Name": "ModVe.Shared.NavMenu",
+        "Name": "ModVe.App",
         "AssemblyName": "ModVe",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "ModVe.Shared.NavMenu"
+            "TagName": "ModVe.App"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ModVe.Shared.NavMenu",
-          "Common.TypeNamespace": "ModVe.Shared",
-          "Common.TypeNameIdentifier": "NavMenu",
+          "Common.TypeName": "ModVe.App",
+          "Common.TypeNamespace": "ModVe",
+          "Common.TypeNameIdentifier": "App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
