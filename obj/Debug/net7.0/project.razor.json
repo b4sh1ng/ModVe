@@ -272,43 +272,6 @@
         }
       },
       {
-        "HashCode": -1869943741,
-        "Kind": "Components.Component",
-        "Name": "ModVe.Pages.Module_edit",
-        "AssemblyName": "ModVe",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Module_edit"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ModVe.Pages.Module_edit",
-          "Common.TypeNamespace": "ModVe.Pages",
-          "Common.TypeNameIdentifier": "Module_edit"
-        }
-      },
-      {
-        "HashCode": 1884650626,
-        "Kind": "Components.Component",
-        "Name": "ModVe.Pages.Module_edit",
-        "AssemblyName": "ModVe",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ModVe.Pages.Module_edit"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ModVe.Pages.Module_edit",
-          "Common.TypeNamespace": "ModVe.Pages",
-          "Common.TypeNameIdentifier": "Module_edit",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": 1117989408,
         "Kind": "Components.Component",
         "Name": "ModVe.Pages.Module_anzeigen",
@@ -342,43 +305,6 @@
           "Common.TypeName": "ModVe.Pages.Module_anzeigen",
           "Common.TypeNamespace": "ModVe.Pages",
           "Common.TypeNameIdentifier": "Module_anzeigen",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -890026130,
-        "Kind": "Components.Component",
-        "Name": "ModVe.Pages.Modulzuordnung_edit",
-        "AssemblyName": "ModVe",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Modulzuordnung_edit"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ModVe.Pages.Modulzuordnung_edit",
-          "Common.TypeNamespace": "ModVe.Pages",
-          "Common.TypeNameIdentifier": "Modulzuordnung_edit"
-        }
-      },
-      {
-        "HashCode": 1664312529,
-        "Kind": "Components.Component",
-        "Name": "ModVe.Pages.Modulzuordnung_edit",
-        "AssemblyName": "ModVe",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ModVe.Pages.Modulzuordnung_edit"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ModVe.Pages.Modulzuordnung_edit",
-          "Common.TypeNamespace": "ModVe.Pages",
-          "Common.TypeNameIdentifier": "Modulzuordnung_edit",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
