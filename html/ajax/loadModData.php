@@ -9,6 +9,7 @@ $stmt->execute();
 
 foreach ($stmt as $result) {
     $response = '
+    <input type="hidden" class="form-control" name="modul-nummer" id="modul-nummer" value="' . $modid . '">
     <div class="mb-3">
     <label for="modul-name" class="col-form-label">Modul:</label>
     <input type="text" class="form-control" name="modul-name" id="modul-name" required placeholder="Modulname" value="' . $result['Modu'] . '">
@@ -19,12 +20,22 @@ foreach ($stmt as $result) {
     </div>
     <div class="mb-3">
     <label for="modul-name" class="col-form-label">Lehrer ID:</label>
-    <input type="text" class="form-control" name="modul-lehrer" id="modul-lehrer" required placeholder="Lehrer ID" value="' . $result['Lid'] . '">
-    </div>
+    <select name="modul-lehrer" id="modul-lehrer" required>';
+    $stmt = $pdo->prepare("SELECT * FROM module");
+    $stmt->execute();
+    foreach ($stmt as $result) {
+        $response .= ' "<option value=' . $result['Lid'] . '>' . $result['Lid'] . '</option>"';
+    }
+    $response .= '</select></div>
     <div class="mb-3">
     <label for="modul-name" class="col-form-label">Raum:</label>
-    <input type="text" class="form-control" name="modul-raum" id="modul-raum" required placeholder="Raumnummer" value="' . $result['Rnr'] . '">
-    </div>';
+    <select name="modul-raum" id="modul-raum" required>';
+    $stmt = $pdo->prepare("SELECT * FROM module");
+    $stmt->execute();
+    foreach ($stmt as $result) {
+        $response .= ' "<option value=' . $result['Rnr'] . '>' . $result['Rnr'] . '</option>"';
+    }
+    $response .= '</select></div>';
 }
 
 echo $response;
