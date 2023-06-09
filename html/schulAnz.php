@@ -11,10 +11,30 @@
 <body style="background-color:#1E90FF">
     <?php require __DIR__ . "/global/navBar.html";
     require_once "../mysql.inc.php";
-    $stmt = $pdo->prepare('SELECT * FROM schueler');
+
+    $filterPlz = isset($_GET['plz']) ? $_GET['plz'] : '';
+
+    if (!empty($filterPlz)) {
+        $stmt = $pdo->prepare('SELECT * FROM schueler WHERE PLZ LIKE :plz');
+        $stmt->bindValue(':plz', $filterPlz . '%');
+    } else {
+        $stmt = $pdo->prepare('SELECT * FROM schueler');
+    }
+
     $stmt->execute();
     ?>
     <div style="margin:25px;">
+        <form method="GET" class="row g-3" style="margin-bottom: 1em;">
+            <div class="col-auto">
+                <label for="plz-filter" class="col-form-label fw-bold text-light">Filter nach PLZ:</label>
+            </div>
+            <div class="col-auto">
+                <div class="input-group">
+                    <input type="text" id="plz-filter" name="plz" value="<?php echo $filterPlz; ?>" class="form-control">
+                    <button class="btn btn-dark" type="submit">Filter Anwenden</button>
+                </div>
+            </div>
+        </form>
         <table class="table table-striped table-dark table-hover table-sm rounded">
             <thead>
                 <tr>
