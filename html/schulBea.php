@@ -215,29 +215,34 @@
             var plz = $('.add-row input[name="plz"]').val();
             var ort = $('.add-row input[name="ort"]').val();
 
-            // Perform validation on the input values if needed
+
 
             // Create an AJAX request to save the new student
-            $.ajax({
-                type: 'POST',
-                url: './ajax/addSchulData.php',
-                data: {
-                    sname: sname,
-                    svname: svname,
-                    gebd: gebd,
-                    str: str,
-                    plz: plz,
-                    ort: ort
-                },
-                success: function(response) {
-                    // Handle success if necessary
-                    // Refresh the table or update it with the new student data
-                },
-                error: function(xhr, status, error) {
-                    console.log(xhr.responseText);
-                    // Handle error if necessary
-                }
-            });
+
+            if (sname !== '') {
+                $.ajax({
+                    type: 'POST',
+                    url: './ajax/addSchulData.php',
+                    data: {
+                        sname: sname,
+                        svname: svname,
+                        gebd: gebd,
+                        str: str,
+                        plz: plz,
+                        ort: ort
+                    },
+                    success: function(response) {
+                        // Handle success if necessary
+                        // Refresh the table or update it with the new student data
+                    },
+                    error: function(xhr, status, error) {
+                        console.log(xhr.responseText);
+                        // Handle error if necessary
+                    }
+                });
+            } else {
+                alert('Bitte geben Sie den Namen des Schülers ein.');
+            }
 
             // Reset the input values in the add-row
             $('.add-row input').val('');
