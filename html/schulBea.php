@@ -34,12 +34,12 @@
                 foreach ($stmt as $result) {
                     echo " <tr>
                         <td class ='snr-cell'>" . $result['Snr']     . "</td>      
-                        <td class ='editable-cell'>" . $result['Sname']   . "</td>      
-                        <td class ='editable-cell'>" . $result['Svname']  . "</td>      
-                        <td class ='editable-cell'>" . $result['gebd']    . "</td>      
-                        <td class ='editable-cell'>" . $result['Str']     . "</td>      
-                        <td class ='editable-cell'>" . $result['PLZ']     . "</td>      
-                        <td class ='editable-cell'>" . $result['Ort']     . "</td>   
+                        <td class ='editable-cell' name='sname'>" . $result['Sname']   . "</td>      
+                        <td class ='editable-cell' name='svname'>" . $result['Svname']  . "</td>      
+                        <td class ='editable-cell' name='gebd'>" . $result['gebd']    . "</td>      
+                        <td class ='editable-cell' name='str'>" . $result['Str']     . "</td>      
+                        <td class ='editable-cell' name='plz'>" . $result['PLZ']     . "</td>      
+                        <td class ='editable-cell' name='ort'>" . $result['Ort']     . "</td>   
                         <td>
                             <button class='btn btn-warning btn-sm edit-button' type='button'  ' >Bearbeiten</button>
                             <button class='btn btn-danger btn-sm' type='button'  >Löschen</button> 
@@ -63,6 +63,8 @@
             if ($(this).hasClass('editing')) {
                 // Save the changes
                 var snr = row.find('.snr-cell').text();
+
+
                 //Create an object to store the updated data
                 var data = {
                     snr: snr
@@ -70,7 +72,7 @@
 
                 // Iterate over the editable cells and retrieve their values
                 row.find('.editable-cell').each(function() {
-                    var fieldName = $(this).data('field');
+                    var fieldName = $(this).attr('name');
                     var fieldValue = $(this).find('input').val();
 
                     // Add the field and value to the data object
@@ -87,7 +89,7 @@
                 // AJAX request to update the database
                 $.ajax({
                     type: 'POST',
-                    url: 'update.php', // Replace with the URL that handles the database update
+                    url: './ajax/updateSchulData.php',
                     data: data,
                     success: function(response) {
                         // Handle success if necessary
