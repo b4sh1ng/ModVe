@@ -9,7 +9,52 @@
 </head>
 
 <body style="background-color:#1E90FF">
-    <?php require __DIR__ . "/global/navBar.html" ?>
+    <?php require __DIR__ . "/global/navBar.html";
+    require_once "../mysql.inc.php";
+
+    $filterLname = isset($_GET['lname']) ? $_GET['lname'] : '';
+
+    if (!empty($filterLname)) {
+        $stmt = $pdo->prepare('SELECT * FROM lehrer WHERE Lname LIKE :lname');
+        $stmt->bindValue(':lname','%'. $filterLname . '%');
+    } else {
+        $stmt = $pdo->prepare('SELECT * FROM lehrer');
+    }
+
+    $stmt->execute();
+    ?>
+    <div style="margin:25px;">
+        <form method="GET" class="row g-3" style="margin-bottom: 1em;">
+            <div class="col-auto">
+                <label for="lname-filter" class="col-form-label fw-bold text-light">Filter nach Nachname (Lehrer):</label>
+            </div>
+            <div class="col-auto">
+                <div class="input-group">
+                    <input type="text" id="lname-filter" name="lname" value="<?php echo $filterLname; ?>" class="form-control">
+                    <button class="btn btn-dark" type="submit">Filter Anwenden</button>
+                </div>
+            </div>
+        </form>
+        <table class="table table-striped table-dark table-hover table-sm rounded">
+            <thead>
+                <tr>
+                    <th>Lid</th>
+                    <th>Name</th>
+                    <th>Vorname</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                foreach ($stmt as $result) {
+                    echo " <tr>
+                        <td>" . $result['Lid']     . "</td>      
+                        <td>" . $result['Lname']   . "</td>      
+                        <td>" . $result['Lvname']  . "</td>      
+                    </tr>";
+                } ?>
+            </tbody>
+        </table>
+    </div>
 </body>
 
 </html>
