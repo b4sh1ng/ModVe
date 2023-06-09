@@ -11,7 +11,8 @@
 <body style="background-color:#1E90FF">
     <?php require __DIR__ . "/global/navBar.html";
     require_once "../mysql.inc.php";
-    $stmt = $pdo->prepare('SELECT * FROM module');
+    $stmt = $pdo->prepare('SELECT * FROM module INNER JOIN modulzuordnung on module.Modnr = modulzuordnung.Modnr
+    INNER JOIN schueler on modulzuordnung.Snr = schueler.Snr');
     $stmt->execute();
     ?>
     <div style="margin: 25px; ">
@@ -20,14 +21,26 @@
                 <tr>
                     <th>Modnr.</th>
                     <th>Modul</th>
-                    <th>Modulstunden</th>
-                    <th>Lehrer ID</th>
-                    <th>Raum</th>
+                    <th>Snr</th>
+                    <th>Schüler Vorname</th>
+                    <th>Schüler Nachname</th>
                 </tr>
             </thead>
             <tbody>
+                <?php
+                foreach ($stmt as $result) {
+                    echo "<tr>
+                        <td>" . $result['Modnr'] . "</td>
+                        <td>" . $result['Modu'] . "</td>
+                        <td>" . $result['Snr'] . "</td>
+                        <td>" . $result['Svname'] . "</td>
+                        <td>" . $result['Sname'] . "</td>
+                        </tr>";
+                }
+                ?>
             </tbody>
         </table>
     </div>
 </body>
+
 </html>

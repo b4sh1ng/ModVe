@@ -23,7 +23,7 @@
                     <th>Modulstunden</th>
                     <th>Lehrer ID</th>
                     <th>Raum</th>
-                    <th>Bearbeiten</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -141,6 +141,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
+                    
                     <!-- generated within removeModData.php -->
                 </div>
                 <div class="modal-footer">
