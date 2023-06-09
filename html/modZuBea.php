@@ -75,7 +75,7 @@
 
                     // AJAX request
                     $.ajax({
-                        url: './ajax/removeModData.php',
+                        url: './ajax/removeModzuData.php',
                         type: 'post',
                         data: {
                             modid: modid
@@ -125,7 +125,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Abbrechen</button>
-                    <button type="Submit" class="btn btn-danger">Modul löschen</button>
+                    <button type="Submit" class="btn btn-danger">Löschen</button>
                 </div>
             </form>
         </div>

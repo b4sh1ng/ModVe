@@ -21,7 +21,7 @@ foreach ($stmt as $result) {
     <div class="mb-3">
     <label for="modul-name" class="col-form-label">Lehrer ID:</label>
     <select name="modul-lehrer" id="modul-lehrer" required>';
-    $stmt = $pdo->prepare("SELECT * FROM module");
+    $stmt = $pdo->prepare("SELECT Lid FROM module");
     $stmt->execute();
     foreach ($stmt as $result) {
         $response .= ' "<option value=' . $result['Lid'] . '>' . $result['Lid'] . '</option>"';
@@ -30,7 +30,7 @@ foreach ($stmt as $result) {
     <div class="mb-3">
     <label for="modul-name" class="col-form-label">Raum:</label>
     <select name="modul-raum" id="modul-raum" required>';
-    $stmt = $pdo->prepare("SELECT * FROM module");
+    $stmt = $pdo->prepare("SELECT Rnr FROM module");
     $stmt->execute();
     foreach ($stmt as $result) {
         $response .= ' "<option value=' . $result['Rnr'] . '>' . $result['Rnr'] . '</option>"';
