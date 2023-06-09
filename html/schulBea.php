@@ -142,10 +142,12 @@
 
                 //change del to discard
                 row.find('.del-button').removeClass('btn-danger del-button').addClass('btn-secondary discard-button').text('Verwerfen');
-
             }
-            //Discard button click event listener
-            $('.discard-button').click(function() {
+
+        });
+        //Discard button click event listener
+        $('.del-button').click(function() {
+            if ($(this).hasClass('discard-button')) {
                 var row = $(this).closest('tr');
                 //Exit edit mode
                 row.find('.editable-cell').each(function() {
@@ -158,35 +160,31 @@
                 row.find('.edit-button').text('Bearbeiten');
                 //change discard to del
                 $(this).removeClass('btn-secondary discard-button').addClass('btn-danger del-button').text('Löschen');
+            } else {
+                var snr = $(this).data('snr');
 
-            });
-        });
+                // Confirm the deletion with the user
+                if (confirm('Sind Sie sich sicher das Sie den Schüler Löschen möchten?')) {
+                    $.ajax({
+                        type: 'POST',
+                        url: './ajax/removeSchulData.php',
+                        data: {
+                            snr: snr
+                        },
+                        success: function(response) {
+                            // Handle success if necessary
+                            // Refresh the table or update it with the updated data
+                            location.reload();
+                        },
+                        error: function(xhr, status, error) {
+                            console.log(xhr.responseText);
+                            // Handle error if necessary
+                        }
+                    });
+                }
 
-        // Add click event listener to the Delete button
-        $('.del-button').click(function() {
-            var snr = $(this).data('snr');
-
-            // Confirm the deletion with the user
-            if (confirm('Sind Sie sich sicher das Sie den Schüler Löschen möchten?')) {
-                $.ajax({
-                    type: 'POST',
-                    url: './ajax/removeSchulData.php',
-                    data: {
-                        snr: snr
-                    },
-                    success: function(response) {
-                        // Handle success if necessary
-                        // Refresh the table or update it with the updated data
-                        location.reload();
-                    },
-                    error: function(xhr, status, error) {
-                        console.log(xhr.responseText);
-                        // Handle error if necessary
-                    }
-                });
             }
-
-        });
+        });     
 
 
         // Add click event listener to the Add button
