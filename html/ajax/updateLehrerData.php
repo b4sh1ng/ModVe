@@ -3,8 +3,8 @@ require_once "../../mysql.inc.php";
 
 // Get the updated values from $_POST
 $lid = $_POST['lid'];
-$lname = $_POST['Lname'];
-$lvname = $_POST['Lvname'];
+$lname = $_POST['lname'];
+$lvname = $_POST['lvname'];
 
 // Perform the database update
 $sql = "UPDATE lehrer SET Lname = :lname, Lvname = :lvname WHERE Lid = :lid";

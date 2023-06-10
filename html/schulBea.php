@@ -131,8 +131,6 @@
 
                     // Replace cell contents with input fields
                     $(this).html('<input type="text" class="form-control form-control-sm"  value="' + cellValue + '"style="width:10em;">');
-
-
                 });
 
                 // Add editing class
@@ -184,7 +182,7 @@
                 }
 
             }
-        });     
+        });
 
 
         // Add click event listener to the Add button

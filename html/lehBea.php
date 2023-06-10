@@ -34,8 +34,8 @@
                 <!-- Add a hidden row for adding a new teacher -->
                 <tr class="add-row ">
                     <td>x</td>
-                    <td class="editable-cell"><input type="text" class="form-control form-control-sm" name="Lname" placeholder="Name"></td>
-                    <td class="editable-cell"><input type="text" class="form-control form-control-sm" name="Lvname" placeholder="Vorname"></td>
+                    <td class="editable-cell"><input type="text" class="form-control form-control-sm" name="lname" placeholder="Name"></td>
+                    <td class="editable-cell"><input type="text" class="form-control form-control-sm" name="lvname" placeholder="Vorname"></td>
                     <td>
                         <button class="btn btn-success btn-sm save-button" type="button">Speichern</button>
                         <button class="btn btn-secondary btn-sm cancel-button" type="button">Abbrechen</button>
@@ -45,8 +45,8 @@
                 foreach ($stmt as $result) {
                     echo " <tr>
                         <td class='lid-cell'>" . $result['Lid'] . "</td>      
-                        <td class='editable-cell' name='name'>" . $result['Lname'] . "</td>      
-                        <td class='editable-cell' name='vorname'>" . $result['Lvname'] . "</td>    
+                        <td class='editable-cell' name='lname'>" . $result['Lname'] . "</td>      
+                        <td class='editable-cell' name='lvname'>" . $result['Lvname'] . "</td>    
                         <td>
                             <button class='btn btn-warning btn-sm edit-button' type='button'>Bearbeiten</button>
                             <button class='btn btn-danger btn-sm del-button' type='button' data-lid='" . $result['Lid'] . "'>Löschen</button> 
@@ -194,8 +194,8 @@
         // Add click event listener to the Save button in the add-row
         $('.save-button').click(function() {
             // Retrieve the input values from the add-row
-            var name = $('.add-row input[name="name"]').val();
-            var vorname = $('.add-row input[name="vorname"]').val();
+            var name = $('.add-row input[name="lname"]').val();
+            var vorname = $('.add-row input[name="lvname"]').val();
 
             // Create an AJAX request to save the new teacher
             if (name !== '') {
@@ -203,8 +203,8 @@
                     type: 'POST',
                     url: './ajax/addLehrerData.php',
                     data: {
-                        name: name,
-                        vorname: vorname
+                        lname: name,
+                        lvname: vorname
                     },
                     success: function(response) {
                         // Handle success if necessary

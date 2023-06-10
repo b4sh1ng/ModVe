@@ -2,8 +2,8 @@
 require_once "../../mysql.inc.php";
 
 // Get the values from $_POST
-$lname = $_POST['Lname'];
-$lvname = $_POST['Lvname'];
+$lname = $_POST['lname'];
+$lvname = $_POST['lvname'];
 
 // Perform the database insert
 $sql = "INSERT INTO lehrer (Lname, Lvname) VALUES (:lname, :lvname)";
