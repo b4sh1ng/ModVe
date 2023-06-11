@@ -24,9 +24,10 @@ $stmt->execute();
 
 // Handle the success or error response
 if ($stmt->rowCount() > 0) {
-    // Update successful
-    echo "Update successful";
+    // Insert successful
+    $response = "Bearbeiten Erfolgreich";
 } else {
-    // Update failed
-    echo "Update failed";
+    // Insert failed
+    $response = "Bearbeiten Fehlgeschlagen";
 }
+echo $response;

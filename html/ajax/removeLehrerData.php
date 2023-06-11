@@ -10,9 +10,11 @@ $stmt->execute();
 
 // Handle the success or error response
 if ($stmt->rowCount() > 0) {
-    // Deletion successful
-    echo "Deletion successful";
+    // Insert successful
+    $response = "Löschen Erfolgreich";
 } else {
-    // Deletion failed
-    echo "Deletion failed";
+    // Insert failed
+    $response = "Löschen Fehlgeschlagen";
 }
+echo $response;
+

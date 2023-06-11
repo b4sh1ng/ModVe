@@ -104,6 +104,7 @@
                     data: data,
                     success: function(response) {
                         // Handle success if necessary
+                        alert(response);
                     },
                     error: function(xhr, status, error) {
                         console.log(xhr.responseText);
@@ -164,6 +165,7 @@
                         success: function(response) {
                             // Handle success if necessary
                             // Refresh the table or update it with the updated data
+                            alert(response);
                             location.reload();
                         },
                         error: function(xhr, status, error) {
@@ -209,7 +211,7 @@
                     success: function(response) {
                         // Handle success if necessary
                         // Refresh the table or update it with the new teacher data
-
+                        alert(response);
                     },
                     error: function(xhr, status, error) {
                         console.log(xhr.responseText);

@@ -15,8 +15,9 @@ $stmt->execute();
 // Handle the success or error response
 if ($stmt->rowCount() > 0) {
     // Insert successful
-    echo "Insert successful";
+    $response = "Hinzufügen Erfolgreich";
 } else {
     // Insert failed
-    echo "Insert failed";
+    $response = "Hinzufügen Fehlgeschlagen";
 }
+echo $response;
