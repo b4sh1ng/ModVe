@@ -12,7 +12,7 @@ $response = '
 <div class="mb-3">
 <label for="modul-name" class="col-form-label">Lehrer:</label>
 <select name="modul-lehrer" id="modul-lehrer" required>';
-$stmt = $pdo->prepare("SELECT * FROM module INNER JOIN lehrer ON module.Lid = lehrer.Lid");
+$stmt = $pdo->prepare("SELECT * FROM lehrer");
 $stmt->execute();
 foreach ($stmt as $result) {
     $response .= ' "<option value=' . $result['Lid'] . '>' . $result['Lname'] . '</option>"';
