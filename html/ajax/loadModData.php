@@ -19,12 +19,12 @@ foreach ($stmt as $result) {
     <input type="text" class="form-control" name="modul-stunden" id="modul-stunden" required placeholder="Stundenanzahl" value="' . $result['Mstd'] . '">
     </div>
     <div class="mb-3">
-    <label for="modul-name" class="col-form-label">Lehrer ID:</label>
+    <label for="modul-name" class="col-form-label">Lehrer:</label>
     <select name="modul-lehrer" id="modul-lehrer" required>';
-    $stmt = $pdo->prepare("SELECT Lid FROM module");
+    $stmt = $pdo->prepare("SELECT * FROM lehrer");
     $stmt->execute();
     foreach ($stmt as $result) {
-        $response .= ' "<option value=' . $result['Lid'] . '>' . $result['Lid'] . '</option>"';
+        $response .= ' "<option value=' . $result['Lid'] . '>' . $result['Lname'] . '</option>"';
     }
     $response .= '</select></div>
     <div class="mb-3">
