@@ -18,6 +18,7 @@
 --
 -- Table structure for table `lehrer`
 --
+CREATE DATABASE modve;
 
 DROP TABLE IF EXISTS `lehrer`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
