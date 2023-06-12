@@ -9,7 +9,9 @@
 </head>
 
 <body style="background-color:#1E90FF">
-    <?php require __DIR__ . "/global/navBar.html" ?>
+    <?php require __DIR__ . "/global/navBar.html";
+
+    ?>
 </body>
 
 </html>
