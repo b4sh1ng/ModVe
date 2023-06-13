@@ -167,7 +167,7 @@ CREATE TABLE `verw` (
 
 LOCK TABLES `verw` WRITE;
 /*!40000 ALTER TABLE `verw` DISABLE KEYS */;
-INSERT INTO `verw` VALUES (1,'ritter',10,'test','nope');
+INSERT INTO `verw` VALUES (1,'ritter',10,'$2y$10$/Ew2jA6pt3bP4qzNnvDBZuA8YbqIxycCbl4T2T1nPD1P6zeLuAXj6','nope');/*passwort ist: test*/
 /*!40000 ALTER TABLE `verw` ENABLE KEYS */;
 UNLOCK TABLES;
 
