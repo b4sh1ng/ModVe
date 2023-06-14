@@ -10,13 +10,16 @@
 
 <body style="background-color:#1E90FF">
     <?php
+    session_start();
     require __DIR__ . "/global/navBar.html"; //NavBar hinzufügen
     require_once "../mysql.inc.php";
     $stmt = $pdo->prepare('SELECT * FROM module');
     $stmt->execute();
     ?>
     <div style="margin: 25px; ">
-        <table class="table table-striped table-dark table-hover table-sm rounded">
+        <?php
+        $html =
+            '<table class="table table-striped table-dark table-hover table-sm rounded ">
             <thead>
                 <tr>
                     <th>Modnr.</th>
@@ -26,23 +29,25 @@
                     <th>Raum</th>
                 </tr>
             </thead>
-            <tbody>
-                <?php
-                foreach ($stmt as $result) {
-                    echo "<tr>
+            <tbody>';
+        foreach ($stmt as $result) {
+            $html .= "<tr>
                         <td>" . $result['Modnr'] . "</td>
                         <td>" . $result['Modu'] . "</td>
                         <td>" . $result['Mstd'] . "</td>
                         <td>" . $result['Lid'] . "</td>
                         <td>" . $result['Rnr'] . "</td>
                         </tr>";
-                }
-                ?>
-            </tbody>
+        }
+        echo $html;
+        $_SESSION['pdf_html'] = $html;
+        ?>
+        </tbody>
+        <form action="./form/download_pdf.php" method="post">
+            <button class="btn btn-success" type="submit" name="btn_submit" value="PDF laden..." style="margin-bottom: 1em; margin-right: 1em;">PDF Download</button>
+        </form>
         </table>
     </div>
-
-
 </body>
 
 </html>
