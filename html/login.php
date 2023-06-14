@@ -26,6 +26,8 @@
                         <input class="form-control" type="password" name="2fa_key" value=<?php echo isset($_POST['value']) ? htmlspecialchars($_POST['value']) : null ?>>
 
                         <input class="btn btn-dark" type="submit" Name="btn_login" style="margin-top: 1em;" value="Einloggen" />
+                        <input class="btn btn-dark" type="submit" Name="btn_2fa" style="margin-top: 1em;" value="2fa-test" />
+
                     </div>
                 </div>
             </form>
@@ -44,23 +46,21 @@
                 $current_code_2fa = trim(shell_exec("oathtool --base32 --totp $fakey"));
                 $pwdVerify = password_verify($_POST['passwd'], $password);
 
-
-                if ($_POST['loginId'] == $userid && $pwdVerify && $access_lvl >= 10 && ($fakey == "nope")) {
-
-
-                    /* session_start();
-                    $_SESSION['data'] = $userid;
-                    header("Location: ./admin_view.php");*/
-                } else if ($_POST['loginId'] == $userid && $pwdVerify && ($access_lvl >= 10) && ($_POST['2fa_key'] == $current_code_2fa)) {
+                if ($_POST['loginId'] == $userid && $pwdVerify && ($access_lvl >= 10) && ($_POST['2fa_key'] == $current_code_2fa)) {
                     echo "yo klappt";
-                    /*
+
                     session_start();
                     $_SESSION['data'] = $userid;
-                    header("Location: ./admin_view.php");*/
+                    //  header("Location: ./admin_view.php");
                 } else {
 
                     echo "Login versuch gescheitert! Überprüfe ID und Passwort! <br>  Oder du hast keine Berechtigung dazu!";
                 }
+            }
+            if (isset($_POST['btn_2fa'])) {
+                $user = $_SESSION['data'];
+                shell_exec("../2fakey/create2fa.sh $user $db_user $db_pwd $db_name");
+                echo "<script> location.replace(\"2fa_auth.php\"); </script>";
             }
             ?>
         </div>
