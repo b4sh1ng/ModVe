@@ -17,6 +17,7 @@
     <?php
     require __DIR__ . "/global/navBar.html";
     require_once "../mysql.inc.php";
+    require_once "./session.inc.php";
     $stmt = $pdo->prepare('SELECT * FROM lehrer');
     $stmt->execute();
     ?>
@@ -39,6 +40,8 @@
                     <td>
                         <button class="btn btn-success btn-sm save-button" type="button">Speichern</button>
                         <button class="btn btn-secondary btn-sm cancel-button" type="button">Abbrechen</button>
+
+
                     </td>
                 </tr>
                 <?php
@@ -54,8 +57,8 @@
                     </tr>";
                 } ?>
             </tbody>
-
             <button class="btn btn-success addButton" type="button" style="margin-bottom: 1em; margin-right: 1em;">Hinzufügen</button>
+
         </table>
     </div>
 </body>

@@ -13,6 +13,7 @@
 <body style="background-color:#1E90FF">
     <?php require __DIR__ . "/global/navBar.html";
     require_once "../mysql.inc.php";
+    require_once "./session.inc.php";
     $stmt = $pdo->prepare('SELECT * FROM module INNER JOIN modulzuordnung on module.Modnr = modulzuordnung.Modnr
     INNER JOIN schueler on modulzuordnung.Snr = schueler.Snr');
     $stmt->execute();

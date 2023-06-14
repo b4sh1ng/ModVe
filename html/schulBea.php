@@ -17,6 +17,7 @@
     <?php
     require __DIR__ . "/global/navBar.html";
     require_once "../mysql.inc.php";
+    require_once "./session.inc.php";
     $stmt = $pdo->prepare('SELECT * FROM schueler');
     $stmt->execute();
     ?>
@@ -114,7 +115,7 @@
                     url: './ajax/updateSchulData.php',
                     data: data,
                     success: function(response) {
-                       alert(response);
+                        alert(response);
                     },
                     error: function(xhr, status, error) {
                         console.log(xhr.responseText);

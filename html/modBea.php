@@ -12,6 +12,7 @@
 <body style="background-color:#1E90FF">
     <?php require __DIR__ . "/global/navBar.html";
     require_once "../mysql.inc.php";
+    require_once "./session.inc.php";
     ?>
 
     <div style="margin: 25px;">
@@ -141,7 +142,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    
+
                     <!-- generated within removeModData.php -->
                 </div>
                 <div class="modal-footer">
