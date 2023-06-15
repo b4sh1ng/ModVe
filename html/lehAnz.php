@@ -10,7 +10,6 @@
 
 <body style="background-color:#1E90FF">
     <?php
-    session_start();
     require __DIR__ . "/global/navBar.php";
     require_once "../mysql.inc.php";
 
