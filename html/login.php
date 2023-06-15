@@ -29,7 +29,7 @@
                             <input class="form-control" type="text" name="loginId" value="<?php echo isset($_POST['value']) ? htmlspecialchars($_POST['value']) : null ?>">
 
                             <label class="col-form-label fw-bold text-light">Passwort</label>
-                            <input class="form-control" type="password" name="passwd" value="<?php echo isset($_POST['value']) ? htmlspecialchars($_POST['value']) : null ?>"">
+                            <input class="form-control" type="password" name="passwd" value="<?php echo isset($_POST['value']) ? htmlspecialchars($_POST['value']) : null ?>">
 
                             <label class=" col-form-label fw-bold text-light">2FA Key</label>
                             <input class="form-control" type="password" name="2fa_key" value="<?php echo isset($_POST['value']) ? htmlspecialchars($_POST['value']) : null ?>">

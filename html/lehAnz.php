@@ -29,7 +29,7 @@
 
         <form method="GET" class="row g-3" style="margin-bottom: 1em;">
             <div class="col-auto">
-                <label for="lname-filter" class="col-form-label fw-bold text-light">Filter nach Nachname (Lehrer):</label>
+                <label for="lname-filter" class="col-form-label fw-bold text-light">Filter nach Nachname:</label>
             </div>
             <div class="col-auto">
                 <div class="input-group">
