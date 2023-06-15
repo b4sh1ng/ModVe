@@ -1,6 +1,13 @@
-$ echo "Dies ist ein Installationsskript für ein Modulverwaltungssystem."
-$ read -p "Bitte gib dein Myql Nutzernamen ein: " db_login
-$ read -ps "Bitte gib dein Mysql Passwort ein: " db_pass
-mysql --user=$db_login --password=$db_pass --verbose < base_database.sql
+#!/bin/bash
 
-$ echo "Datenbank wurde eingespielt!\nStandartnutzer mit Passwort wurde mit erstellt!\nDie Logindaten für diesen Nutzer sind aus der Dokumentation zu entnehmen."
+echo "Dies ist ein Installationsskript für ein Modulverwaltungssystem."
+read -p "Bitte gib deinen MySQL Nutzernamen ein: " db_login
+echo -n "Bitte gib dein MySQL Passwort ein: "
+read -s db_pass
+echo
+
+mysql --user="$db_login" --password="$db_pass" --verbose < base_database.sql || exit 1
+
+echo "Datenbank wurde eingespielt!"
+echo "Standardnutzer mit Passwort wurde erstellt!"
+echo "Die Logindaten fuer diesen Nutzer sind der Dokumentation zu entnehmen."
