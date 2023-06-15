@@ -9,13 +9,17 @@
 </head>
 
 <body style="background-color:#1E90FF">
-    <?php require __DIR__ . "/global/navBar.html";
+    <?php 
+    session_start();
+    require __DIR__ . "/global/navBar.php";
     require_once "../mysql.inc.php";
     $stmt = $pdo->prepare('SELECT * FROM module INNER JOIN modulzuordnung on module.Modnr = modulzuordnung.Modnr
     INNER JOIN schueler on modulzuordnung.Snr = schueler.Snr');
     $stmt->execute();
     ?>
     <div style="margin: 25px; ">
+    <?php
+    $html .= '
         <table class="table table-striped table-dark table-hover table-sm rounded">
             <thead>
                 <tr>
@@ -26,10 +30,10 @@
                     <th>Schüler Nachname</th>
                 </tr>
             </thead>
-            <tbody>
-                <?php
+            <tbody>';
+                
                 foreach ($stmt as $result) {
-                    echo "<tr>
+                    $html .= "<tr>
                         <td>" . $result['Modnr'] . "</td>
                         <td>" . $result['Modu'] . "</td>
                         <td>" . $result['Snr'] . "</td>
@@ -37,8 +41,13 @@
                         <td>" . $result['Sname'] . "</td>
                         </tr>";
                 }
+                echo $html;
+                $_SESSION['pdf_html'] = $html;
                 ?>
             </tbody>
+            <form action="./form/download_pdf.php" method="post">
+            <button class="btn btn-success" type="submit" name="btn_submit" value="PDF laden..." style="margin-bottom: 1em; margin-right: 1em;">PDF Download</button>
+        </form>
         </table>
     </div>
 </body>

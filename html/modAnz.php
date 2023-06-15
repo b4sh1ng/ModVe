@@ -11,7 +11,7 @@
 <body style="background-color:#1E90FF">
     <?php
     session_start();
-    require __DIR__ . "/global/navBar.html"; //NavBar hinzufügen
+    require __DIR__ . "/global/navBar.php"; //NavBar hinzufügen
     require_once "../mysql.inc.php";
     $stmt = $pdo->prepare('SELECT * FROM module');
     $stmt->execute();

@@ -9,7 +9,9 @@
 </head>
 
 <body style="background-color:#1E90FF">
-    <?php require __DIR__ . "/global/navBar.html";
+    <?php 
+    session_start();
+    require __DIR__ . "/global/navBar.php";
     require_once "../mysql.inc.php";
 
     $filterLname = isset($_GET['lname']) ? $_GET['lname'] : '';
@@ -24,6 +26,7 @@
     $stmt->execute();
     ?>
     <div style="margin:25px;">
+    
         <form method="GET" class="row g-3" style="margin-bottom: 1em;">
             <div class="col-auto">
                 <label for="lname-filter" class="col-form-label fw-bold text-light">Filter nach Nachname (Lehrer):</label>
@@ -35,6 +38,8 @@
                 </div>
             </div>
         </form>
+        <?php
+        $html .= '
         <table class="table table-striped table-dark table-hover table-sm rounded">
             <thead>
                 <tr>
@@ -43,16 +48,23 @@
                     <th>Vorname</th>
                 </tr>
             </thead>
-            <tbody>
-                <?php
+            <tbody>';
+                
                 foreach ($stmt as $result) {
-                    echo " <tr>
+                    $html .= "<tr>
                         <td>" . $result['Lid']     . "</td>      
                         <td>" . $result['Lname']   . "</td>      
                         <td>" . $result['Lvname']  . "</td>      
                     </tr>";
-                } ?>
+                } 
+                echo $html;
+                $_SESSION['pdf_html'] = $html;
+                ?>
             </tbody>
+            
+            <form action="./form/download_pdf.php" method="post">
+            <button class="btn btn-success" type="submit" name="btn_submit" value="PDF laden..." style="margin-bottom: 1em; margin-right: 1em;">PDF Download</button>
+        </form>
         </table>
     </div>
 </body>

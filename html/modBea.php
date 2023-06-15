@@ -10,7 +10,7 @@
 </head>
 
 <body style="background-color:#1E90FF">
-    <?php require __DIR__ . "/global/navBar.html";
+    <?php require __DIR__ . "/global/navBar.php";
     require_once "../mysql.inc.php";
     require_once "./session.inc.php";
     ?>
