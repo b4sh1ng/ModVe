@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lehrer bearbeiten | FST</title>
+
+    <!--Der Style dient zum ausblenden der Hinzufügen-Zeile-->
     <style>
         .add-row {
             display: none;
@@ -32,7 +34,7 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- Add a hidden row for adding a new teacher -->
+                <!-- Versteckte Zeile zum Hinzufügen eines Lehrers -->
                 <tr class="add-row ">
                     <td>x</td>
                     <td class="editable-cell"><input type="text" class="form-control form-control-sm" name="lname" placeholder="Name"></td>
@@ -40,8 +42,6 @@
                     <td>
                         <button class="btn btn-success btn-sm save-button" type="button">Speichern</button>
                         <button class="btn btn-secondary btn-sm cancel-button" type="button">Abbrechen</button>
-
-
                     </td>
                 </tr>
                 <?php
@@ -63,9 +63,17 @@
     </div>
 </body>
 
+<!--jquery library-->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     $(document).ready(function() {
+        //wird verwendet, um sicherzustellen, dass der enthaltene Code in jQuery 
+        //erst ausgeführt wird, wenn das DOM vollständig geladen ist.
+        //Das DOM (Document Object Model) ist eine Schnittstelle, 
+        //die den strukturierten Aufbau eines HTML repräsentiert
+        //und es ermöglicht, auf die Elemente des Dokuments zuzugreifen, 
+        //sie zu manipulieren und mit ihnen zu interagieren.
+
         // Add click event listeners to the edit buttons
         $('.edit-button').click(function() {
             var row = $(this).closest('tr');

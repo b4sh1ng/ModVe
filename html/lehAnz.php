@@ -13,19 +13,20 @@
     require __DIR__ . "/global/navBar.php";
     require_once "../mysql.inc.php";
 
+    //Filter Anzeige
     $filterLname = isset($_GET['lname']) ? $_GET['lname'] : '';
 
+    //fügt wildcards am Anfang und Ende des namens hinzu, wählt entsprechend aus der Datenbank aus
     if (!empty($filterLname)) {
         $stmt = $pdo->prepare('SELECT * FROM lehrer WHERE Lname LIKE :lname');
         $stmt->bindValue(':lname', '%' . $filterLname . '%');
     } else {
         $stmt = $pdo->prepare('SELECT * FROM lehrer');
     }
-
-    $stmt->execute();
+    $stmt->execute();    
     ?>
-    <div style="margin:25px;">
 
+    <div style="margin:25px;">
         <form method="GET" class="row g-3" style="margin-bottom: 1em;">
             <div class="col-auto">
                 <label for="lname-filter" class="col-form-label fw-bold text-light">Filter nach Nachname:</label>
@@ -34,11 +35,14 @@
                 <div class="input-group">
                     <input type="text" id="lname-filter" name="lname" value="<?php echo $filterLname; ?>" class="form-control">
                     <button class="btn btn-dark" type="submit">Filter Anwenden</button>
+                    <!--Link zur PDF-erstellung-->
                     <a href="./form/download_pdf.php" class="btn btn-success" style="margin-left: 0.5em;">PDF Download</a>
                 </div>
             </div>
         </form>
         <?php
+
+        //Die Tabelle wird in der Variable gespeichert die zum Erstellen der PDF verwendet wird
         $html = '
         <table class="table table-striped table-dark table-hover table-sm rounded">
             <thead>
@@ -49,8 +53,10 @@
                 </tr>
             </thead>
             <tbody>';
-
+        
+        //für jedes Ergebnis des Select statement wird eine Zeile erstellt
         foreach ($stmt as $result) {
+            //.= bedeutet anhängen 
             $html .= "<tr>
                         <td>" . $result['Lid']     . "</td>      
                         <td>" . $result['Lname']   . "</td>      
