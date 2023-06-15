@@ -9,7 +9,7 @@
 </head>
 
 <body style="background-color:#1E90FF">
-    <?php 
+    <?php
     require __DIR__ . "/global/navBar.php";
     require_once "../mysql.inc.php";
 
@@ -33,6 +33,7 @@
                 <div class="input-group">
                     <input type="text" id="plz-filter" name="plz" value="<?php echo $filterPlz; ?>" class="form-control">
                     <button class="btn btn-dark" type="submit">Filter Anwenden</button>
+                    <a href="./form/download_pdf.php" class="btn btn-success" style="margin-left: 0.5em;">PDF Download</a>
                 </div>
             </div>
         </form>
@@ -50,9 +51,9 @@
                     <th>Ort</th>
                 </tr>
             </thead>
-            <tbody>';                
-                foreach ($stmt as $result) {
-                    $html .= " <tr>
+            <tbody>';
+        foreach ($stmt as $result) {
+            $html .= " <tr>
                         <td>" . $result['Snr']     . "</td>      
                         <td>" . $result['Sname']   . "</td>      
                         <td>" . $result['Svname']  . "</td>      
@@ -61,13 +62,10 @@
                         <td>" . $result['PLZ']     . "</td>      
                         <td>" . $result['Ort']     . "</td>      
                     </tr>";
-                } 
-                echo $html;
-                $_SESSION['pdf_html'] = $html;?>
-            </tbody>
-            <form action="./form/download_pdf.php" method="post">
-            <button class="btn btn-success" type="submit" name="btn_submit" value="PDF laden..." style="margin-bottom: 1em; margin-right: 1em;">PDF Download</button>
-        </form>
+        }
+        echo $html;
+        $_SESSION['pdf_html'] = $html; ?>
+        </tbody>
         </table>
     </div>
 </body>
