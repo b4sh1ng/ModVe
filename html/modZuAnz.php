@@ -19,7 +19,7 @@
     ?>
     <div style="margin: 25px; ">
     <?php
-    $html .= '
+    $html = '
         <table class="table table-striped table-dark table-hover table-sm rounded">
             <thead>
                 <tr>
