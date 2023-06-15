@@ -10,7 +10,6 @@
 
 <body style="background-color:#1E90FF">
     <?php 
-    session_start();
     require __DIR__ . "/global/navBar.php";
     require_once "../mysql.inc.php";
     $stmt = $pdo->prepare('SELECT * FROM module INNER JOIN modulzuordnung on module.Modnr = modulzuordnung.Modnr
@@ -19,8 +18,7 @@
     ?>
     <div style="margin: 25px; ">
     <?php
-    $html = '
-        <table class="table table-striped table-dark table-hover table-sm rounded">
+    $html = '<table class="table table-striped table-dark table-hover table-sm rounded">
             <thead>
                 <tr>
                     <th>Modnr.</th>

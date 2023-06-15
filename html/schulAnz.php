@@ -9,8 +9,7 @@
 </head>
 
 <body style="background-color:#1E90FF">
-    <?php
-    session_start();
+    <?php 
     require __DIR__ . "/global/navBar.php";
     require_once "../mysql.inc.php";
 
@@ -26,8 +25,6 @@
     $stmt->execute();
     ?>
     <div style="margin:25px;">
-
-
         <form method="GET" class="row g-3" style="margin-bottom: 1em;">
             <div class="col-auto">
                 <label for="plz-filter" class="col-form-label fw-bold text-light">Filter nach PLZ:</label>
@@ -36,7 +33,6 @@
                 <div class="input-group">
                     <input type="text" id="plz-filter" name="plz" value="<?php echo $filterPlz; ?>" class="form-control">
                     <button class="btn btn-dark" type="submit">Filter Anwenden</button>
-                    <a href="./form/download_pdf.php" class="btn btn-success" style="margin-left: 0.5em;">PDF Download</a>
                 </div>
             </div>
         </form>
@@ -54,9 +50,9 @@
                     <th>Ort</th>
                 </tr>
             </thead>
-            <tbody>';
-        foreach ($stmt as $result) {
-            $html .= " <tr>
+            <tbody>';                
+                foreach ($stmt as $result) {
+                    $html .= " <tr>
                         <td>" . $result['Snr']     . "</td>      
                         <td>" . $result['Sname']   . "</td>      
                         <td>" . $result['Svname']  . "</td>      
@@ -65,11 +61,13 @@
                         <td>" . $result['PLZ']     . "</td>      
                         <td>" . $result['Ort']     . "</td>      
                     </tr>";
-        }
-        echo $html;
-        $_SESSION['pdf_html'] = $html; ?>
-        </tbody>
-
+                } 
+                echo $html;
+                $_SESSION['pdf_html'] = $html;?>
+            </tbody>
+            <form action="./form/download_pdf.php" method="post">
+            <button class="btn btn-success" type="submit" name="btn_submit" value="PDF laden..." style="margin-bottom: 1em; margin-right: 1em;">PDF Download</button>
+        </form>
         </table>
     </div>
 </body>
